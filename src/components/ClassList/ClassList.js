@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import "./ClassList.css";
 
 export default class ClassList extends Component {
   constructor() {
@@ -42,7 +43,9 @@ export default class ClassList extends Component {
         <h2>ClassList:</h2>
         {studentsArr}
         <p>&emsp;</p>
-        <button onClick={this.goBack}>{"< Go back"}</button>
+        <button onClick={this.goBack} className="back_btn">
+          {"< Go Back"}
+        </button>
       </div>
     );
   }

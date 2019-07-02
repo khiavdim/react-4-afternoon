@@ -1,12 +1,13 @@
 import React, { Component } from "react";
 import axios from "axios";
+import "./Student.css";
 
 export default class Student extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      studentInfo: {},
-    }
+      studentInfo: {}
+    };
   }
 
   componentDidMount() {
@@ -22,7 +23,7 @@ export default class Student extends Component {
 
   goBack = () => {
     this.props.history.goBack();
-}
+  };
 
   render() {
     let { studentInfo } = this.state;
@@ -35,7 +36,9 @@ export default class Student extends Component {
         <h3>Grade: {studentInfo.grade}</h3>
         <h3>Email: {studentInfo.email}</h3>
         <p>&emsp;</p>
-        <button onClick={this.goBack}>{"< Go back"}</button>
+        <button onClick={this.goBack} className="back_btn">
+          {"< Go Back"}
+        </button>
       </div>
     );
   }
